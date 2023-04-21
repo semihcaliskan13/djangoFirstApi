@@ -7,7 +7,7 @@ from semester.models import Semester
 from semester.serializers import SemesterSerializer
 
 
-# Create your views here. from now on last
+# Create your views here. from now 
 
 
 class SemesterList(generics.ListCreateAPIView):
