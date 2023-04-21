@@ -17,7 +17,7 @@ class SemesterList(generics.ListCreateAPIView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        # query_params içinden id ve name parametrelerini alın farklı
+        # query_params içinden id ve name parametrelerini alın farklı easy
         id = self.request.query_params.get('id', None)
         # name = self.request.query_params.get('name', None)
 
