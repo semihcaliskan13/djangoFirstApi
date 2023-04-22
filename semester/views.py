@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
-
 from djangoFirstApi.permissions import ReadOnly
 from semester.models import Semester
 from semester.serializers import SemesterSerializer

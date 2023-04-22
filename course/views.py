@@ -13,5 +13,3 @@ class CourseList(generics.ListCreateAPIView):
     permission_classes = [IsAdminUser | ReadOnly]
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
-
-
