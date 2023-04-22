@@ -6,7 +6,7 @@ from semester.models import Semester
 from semester.serializers import SemesterSerializer
 
 
-# Create your views here.
+# Create your views here. from now
 
 
 class SemesterList(generics.ListCreateAPIView):
@@ -16,7 +16,7 @@ class SemesterList(generics.ListCreateAPIView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        # query_params içinden id ve name parametrelerini alın
+        # query_params içinden id ve name parametrelerini alın farklı easy yeniiiii  s
         id = self.request.query_params.get('id', None)
         # name = self.request.query_params.get('name', None)
 
