@@ -9,7 +9,7 @@ class Semester(models.Model):
         (1, "Spring"),
         (2, "Summer")
     )
-    term = models.CharField(max_length=9, choices=TERM_CHOICES, default=1)
+    term = models.IntegerField(choices=TERM_CHOICES, default=1)
     year = models.IntegerField()
 
 
@@ -21,4 +21,6 @@ class Meta:
 
 
 def __str__(self):
-    return str(self.year) + "-" + str(self.year + 1) + " " + self.term + " Semester"
+    return str(self.year) + "-" + str(self.year + 1) + " " + \
+        self.TERM_CHOICES.__getitem__(self.term).__getitem__(1) + \
+        " Semester"

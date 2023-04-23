@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'account',
     'semester',
-    'course'
+    'course',
+    'semester_course'
 
 ]
 AUTH_USER_MODEL = 'account.MyUser'
