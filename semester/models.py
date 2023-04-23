@@ -4,11 +4,17 @@ from django.db import models
 # Create your models here.
 
 class Semester(models.Model):
-    TERM_CHOICES = (
-        (0, "Fall"),
-        (1, "Spring"),
-        (2, "Summer")
-    )
+    # TERM_CHOICES = (
+    #     (0, "Fall"),
+    #     (1, "Spring"),
+    #     (2, "Summer")
+    # )
+    TERM_CHOICES = [
+        {0, "Fall"},
+        {1, "Spring"},
+        {2, "Summer"}
+        ]
+
     term = models.IntegerField(choices=TERM_CHOICES, default=1)
     year = models.IntegerField()
 
