@@ -40,7 +40,8 @@ class SemesterCreateListTestCase(TestCase):
         # Test GET method
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 0)  # initially empty
+        print(response.data)
+        self.assertEqual(response.data['count'], 0)  # initially empty
 
         # Test POST method
         response = self.client.post(self.url, data=self.semester_data, format='json')
